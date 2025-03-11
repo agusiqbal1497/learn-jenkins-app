@@ -5,10 +5,7 @@ pipeline {
         stage('Test') {
             steps {
                 agent {
-                    docker {
                         sh echo "Test Stage"
-                        reuseNode true
-                }
                 }
             }
         }
