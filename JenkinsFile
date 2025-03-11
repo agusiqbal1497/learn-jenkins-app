@@ -5,8 +5,9 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Test Stage'
-                sh ls -la
-                sh stat build/index.html && echo 'File Exist'
+                sh ls build/index.html
+                sh echo 'File Exist'
+                sh 'npm test'
             }
         }
     }
