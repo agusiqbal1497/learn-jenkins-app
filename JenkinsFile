@@ -5,7 +5,7 @@ pipeline {
         stage('Test') {
             steps {
                 agent {
-                        sh echo "Test Stage"
+                        sh echo 'Test Stage'
                 }
             }
         }
