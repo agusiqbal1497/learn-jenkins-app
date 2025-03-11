@@ -3,10 +3,12 @@ pipeline {
 
     stages {
         stage('Test') {
-            agent {
-                docker {
-                    echo "Test Stage"
-                    reuseNode true
+            steps {
+                agent {
+                    docker {
+                        sh echo "Test Stage"
+                        reuseNode true
+                }
                 }
             }
         }
